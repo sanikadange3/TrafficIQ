@@ -1,4 +1,4 @@
-# 🚦 TrafficIQ: AI-Based Traffic Signal Timing Optimization
+# 🚦 TrafficIQ: AI-Based Traffic Signal Timing Optimization or TrafficIQ: AI-Based Adaptive Traffic Signal Control
 
 An intelligent traffic management system that uses **Machine Learning and adaptive signal optimization** to allocate green-light durations based on predicted traffic demand.
 
