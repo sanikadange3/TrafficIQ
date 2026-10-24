@@ -1,0 +1,40 @@
+{
+    "model_type": "RandomForestRegressor",
+    "algorithm": "Scikit-Learn Random Forest",
+    "n_estimators": 120,
+    "max_depth": 14,
+    "random_seed": 42,
+    "train_samples": 4800,
+    "test_samples": 1200,
+    "mae": 21.72,
+    "rmse": 27.06,
+    "r2_score": 0.9945,
+    "target_variable": "traffic_demand",
+    "features": [
+        "road",
+        "vehicle_count",
+        "traffic_density",
+        "queue_length",
+        "avg_speed",
+        "hour_of_day",
+        "day_of_week",
+        "is_weekend",
+        "prev_waiting_time"
+    ],
+    "feature_importances": {
+        "vehicle_count": 0.9917,
+        "traffic_density": 0.0027,
+        "queue_length": 0.0021,
+        "avg_speed": 0.0019,
+        "prev_waiting_time": 0.0008,
+        "hour_of_day": 0.0003,
+        "day_of_week": 0.0003,
+        "road_West": 0.0001,
+        "road_South": 0.0001,
+        "road_East": 0.0001,
+        "road_North": 0.0001,
+        "is_weekend": 0.0
+    },
+    "training_timestamp": "2026-10-24T19:40:04.417479",
+    "notes": "Predicts short-term incoming traffic demand (PCU/hr) for dynamic Webster optimization."
+}

@@ -15,8 +15,10 @@ import streamlit as st
 import importlib
 import streamlit.components.v1 as st_components
 
-# Ensure local modules are accessible
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Ensure local modules are accessible across platforms
+_project_root = os.path.dirname(os.path.abspath(__file__))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
 
 import components.traffic_intersection as _ti_mod
 importlib.reload(_ti_mod)
@@ -54,7 +56,7 @@ st.set_page_config(
 # Load Custom Light Theme CSS Styling
 css_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "style.css")
 if os.path.exists(css_file):
-    with open(css_file, "r") as f:
+    with open(css_file, "r", encoding="utf-8") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
